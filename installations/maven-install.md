@@ -59,15 +59,7 @@ The following are instructions for installing Apache Maven and Java 8 on an Amaz
 sudo yum install git -y
 ```
 
-## Run these commands to test maven
-- `mvn validate`
-- `mvn compile`
-- `mvn test`
-- `mvn package`
-- `mvn verify`
-- `mvn clean`
-- `mvn install`
-- `mvn deploy`
+**NB**: **Go to the "Maven commands" section of the main README.md file of this project**
 
 
 ### Project Preparation
