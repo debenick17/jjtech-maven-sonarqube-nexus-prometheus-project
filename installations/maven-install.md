@@ -29,19 +29,19 @@ The following are instructions for installing Apache Maven and Java 8 on an Amaz
    ```
    sudo amazon-linux-extras install java-openjdk11
    ```
-   or
+   OR (In case you used `amazon 2023 instance`)
    
    ```
    sudo dnf install java-11-amazon-corretto -y
    ```
-6. Enter the following to set Java 8 as the default runtime on your EC2 instance.
+5. Enter the following to set Java 8 as the default runtime on your EC2 instance.
 
     ```
     sudo /usr/sbin/alternatives --config java
     ```
 - When prompted, enter the number `4` for Java 11.
 
-5. Enter the following to set Java 8 as the default compiler on your EC2 instance.
+6. Enter the following to set Java 8 as the default compiler on your EC2 instance.
 
     ```
     sudo /usr/sbin/alternatives --config javac
@@ -49,7 +49,7 @@ The following are instructions for installing Apache Maven and Java 8 on an Amaz
 - When prompted, enter the number `2` for Javac maven compiler.
 - Make sure to review this config if `mvn compile` breaks
 
-6. Verify your maven version
+7. Verify your maven version
     ```
     mvn -v
     ```
@@ -58,13 +58,25 @@ The following are instructions for installing Apache Maven and Java 8 on an Amaz
 ```
 sudo yum install git -y
 ```
+
+## Run these commands to test maven
+- `mvn validate`
+- `mvn compile`
+- `mvn test`
+- `mvn package`
+- `mvn verify`
+- `mvn clean`
+- `mvn install`
+- `mvn deploy`
+
+
 ### Project Preparation
-7. Create the `.m2` directory in the home directory of your current user
+8. Create the `.m2` directory in the home directory of your current user
     ```
     mkdir ~/.m2
     ```
 
-8. Create the Settings file inside of the `~/.m2` directory
+9. Create the Settings file inside of the `~/.m2` directory
     ```
     cd ~/.m2/
     mv demo/settings.xml ~/.m2/
